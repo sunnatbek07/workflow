@@ -1,0 +1,158 @@
+.wrapper {
+    display: grid;
+    place-content: center;
+    min-width: 100%;
+    min-height: 100vh;
+    font-family: Inter;
+
+    & .content {
+        background: #FFFFFF;
+        min-width: 520px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+            margin-bottom: 8px;
+        }
+
+        & p {
+            color: var(--black, #000);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 40px;
+        }
+
+        & form {
+            width: 100%;
+
+            & .email {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 12px;
+
+                & label {
+                    color: var(--black, #000);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 8px;
+                }
+
+                & input {
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: 1px solid #5C73DB;
+                    color: var(--gray-400, #9FA6B2);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+
+                    &:focus {
+                        outline: #5C73DB;
+                    }
+                }
+            }
+
+            & .password {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                & label {
+                    color: var(--black, #000);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 8px;
+                }
+
+                & input {
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: 1px solid #5C73DB;
+                    color: var(--gray-400, #9FA6B2);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+
+                    &:focus {
+                        outline: #5C73DB;
+                    }
+                }
+
+                & i {
+                    position: absolute;
+                    right: 16px;
+                    top: 45px;
+                    color: var(--gray-400, #9FA6B2);
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            & .text1 {
+                color: var(--black, #000);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 16px 0;
+
+                & div {
+                    color: #5C73DB;
+                    display: inline;
+                }
+            }
+
+            & button {
+                display: flex;
+                width: 100%;
+                height: 48px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 12px;
+                background: #4763E4;
+                border: transparent;
+                color: var(--white, #FFF);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                margin-bottom: 8px;
+                cursor: pointer;
+            }
+
+            & .lastText {
+                color: var(--black, #000);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-align: center;
+                margin: 8px 0 0 0;
+
+                & .link {
+                    color: #5C73DB;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: normal;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
