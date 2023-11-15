@@ -335,6 +335,7 @@ const Controls = () => {
   const [openModal1, setOpenModal1] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
   const [craModal, setCraModal] = useState(false);
+  const [controls, setControls] = useState(false);
 
   const onChange = (key) => {
     // console.log(key);
@@ -346,7 +347,7 @@ const Controls = () => {
       children: <div className='p-8'>
         <div className='flex items-center justify-between'>
           <p>Liste des sociétés</p>
-          <Button color='blue' onClick={() => setOpenModal(true)} className='bg-[#4763E4]'>
+          <Button color='blue' onClick={() => setControls(true)} className='bg-[#4763E4]'>
             <span className='mr-2'>Ajouter</span>
             <Plus />
           </Button>
@@ -361,7 +362,7 @@ const Controls = () => {
       children: <div className='p-8'>
         <div className='flex items-center justify-between'>
           <p>Liste des commissaires contrôleurs</p>
-          <Button color='blue' onClick={() => setOpenModal(true)} className='bg-[#4763E4]'>
+          <Button color='blue' onClick={() => setControls(true)} className='bg-[#4763E4]'>
             <span className='mr-2'>Ajouter</span>
             <Plus />
           </Button>
@@ -563,6 +564,131 @@ const Controls = () => {
         <Modal.Footer>
           <Button color='blue' onClick={() => setOpenModal2(false)}>Enregistrer</Button>
           <Button color="gray" onClick={() => setOpenModal2(false)}>
+            Annuler
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal size={"6xl"} dismissible show={controls} onClose={() => setControls(false)}>
+        <Modal.Header className='mb-[38px]'>Enregistrement d'une compagnie d'assurance</Modal.Header>
+        <Modal.Body>
+          <div className='inputs'>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Nom" />
+              </div>
+              <TextInput id="base" type="email" placeholder='Nom' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="URL WebDAV" />
+              </div>
+              <TextInput id="base" type="text" placeholder='.' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Prénom" />
+              </div>
+              <TextInput id="base" type="text" placeholder='Prénom' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Date de recrutement" />
+              </div>
+              <TextInput id="base" type="date" sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Compte utilisateur associé" />
+              </div>
+              <TextInput id="base" type="text" placeholder='Alexander' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Date de délivrance" />
+              </div>
+              <TextInput id="base" type="date" sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="N° Pièce d'identification" />
+              </div>
+              <TextInput id="base" type="text" placeholder='.' sizing="md" />
+            </div>
+
+            <div className="max-w-full">
+              <div className="mb-2 block">
+                <Label htmlFor="countries" value="Code du Pays" />
+              </div>
+              <Select id="countries" required>
+                <option>CMR</option>
+                <option>Mobile Developer</option>
+                <option>Software Engineer</option>
+                <option>Graphic Designer</option>
+              </Select>
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Lieu de délivrance" />
+              </div>
+              <TextInput id="base" type="text" placeholder='.' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Brigade" />
+              </div>
+              <TextInput id="base" type="text" placeholder='.' sizing="md" />
+            </div>
+
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Numéro de téléphone*" />
+                <TextInput id="base" type="text" placeholder='.' sizing="md" />
+              </div>
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Equipe" />
+                <TextInput id="base" type="text" placeholder='.' sizing="md" />
+              </div>
+            </div>
+            <div>
+              <div className="mb-2 block">
+                <Label htmlFor="base" value="Adresse E-mail" />
+                <TextInput id="base" type="text" placeholder='.' sizing="md" />
+              </div>
+            </div>
+
+            <div className="max-w-full flex items-end gap-2">
+              <div className='grow'>
+                <div className="mb-2 block">
+                  <Label htmlFor="countries" value="Code du Pays" />
+                </div>
+                <Select id="countries" required>
+                  <option>.</option>
+                  <option>Mobile Developer</option>
+                  <option>Software Engineer</option>
+                  <option>Graphic Designer</option>
+                </Select>
+              </div>
+              <Button color='blue' onClick={() => setControls(true)} className='bg-[#4763E4]'>
+                <span className='mr-2'>Ajouter</span>
+                <Plus />
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button color='blue' onClick={() => setControls(false)}>Enregistrer</Button>
+          <Button color="gray" onClick={() => setControls(false)}>
             Annuler
           </Button>
         </Modal.Footer>

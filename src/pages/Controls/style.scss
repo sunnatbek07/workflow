@@ -26,4 +26,16 @@ header {
         font-weight: 400;
         line-height: normal;
     }
+
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: 16px;
+}
+
+.ant-btn-primary {
+    background: #4256D0;
 }

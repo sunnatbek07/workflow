@@ -2,22 +2,33 @@ import React, { useState } from 'react';
 import logoDark from '../../../public/logoDark.svg';
 import patternHexagon from '../../../public/pattern_hexagon.png';
 import './style.scss';
-import { Sidebar, Button } from 'flowbite-react';
+import { Sidebar, Dropdown } from 'flowbite-react';
 import Settings from '../Ui/Icons/Settings';
 import Folder from './../Ui/Icons/Folder';
 import Note from './../Ui/Icons/Note';
 import Display from './../Ui/Icons/Display';
 import Shield from './../Ui/Icons/Shield';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import timCook from "../../../public/timCook.svg";
+import { Popconfirm } from 'antd';
 
 
 const Sidebarr = () => {
+    const navigate = useNavigate();
+    const confirm = (e) => {
+        navigate('/signin');
+    };
+    const cancel = (e) => {
+        console.log(e);
+    };
+
     return (
         <aside>
             <div className='a_main'>
                 <div className='aside_header'>
-                    <img src={logoDark} alt="Dark logo" />
+                    <Link to='/'>
+                        <img src={logoDark} alt="Logo" />
+                    </Link>
                 </div>
                 <div className="mask relative">
                     <img src={patternHexagon} className='absolute top-0 z-[1]' alt="Mak" />
@@ -60,13 +71,23 @@ const Sidebarr = () => {
                 </div>
             </div>
 
-            <div className='aside_footer'>
-                <img src={timCook} alt="User avatar" />
-                <div className='text'>
-                    <h5>Tim Cook</h5>
-                    <p>timcook@force.com</p>
+
+
+            <Popconfirm
+                description="Are you sure to leave?"
+                onConfirm={confirm}
+                onCancel={cancel}
+                okText="Yes"
+                cancelText="No"
+            >
+                <div className='aside_footer relative z-10'>
+                    <img src={timCook} alt="User avatar" />
+                    <div className='text'>
+                        <h5>Tim Cook</h5>
+                        <p>timcook@force.com</p>
+                    </div>
                 </div>
-            </div>
+            </Popconfirm>
         </aside>
     )
 }
