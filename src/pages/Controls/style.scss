@@ -1,0 +1,29 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.main {
+    padding: 20px 40px 63px 40px;
+    max-height: 1310px;
+
+    & h2 {
+        color: var(--black, #000);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        color: var(--gray-800, #27272A);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

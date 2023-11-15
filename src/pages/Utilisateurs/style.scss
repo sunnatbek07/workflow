@@ -1,0 +1,30 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.main {
+    & .edit {
+        padding: 32px;
+
+        & h4 {
+            color: var(--gray-800, #27272A);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 40px;
+        }
+
+        & .inputs {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 12px;
+            row-gap: 16px;
+            margin-bottom: 72px;
+        }
+    }
+}

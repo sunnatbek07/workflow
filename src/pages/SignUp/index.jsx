@@ -46,7 +46,7 @@ const SignUp = () => {
                         </svg>
                     </button>
 
-                    <p className='lastText'>Vous possedez déjà un compte ? <Link to='/' className='link'>Se connecter</Link></p>
+                    <p className='lastText'>Vous possedez déjà un compte ? <Link to='/signin' className='link'>Se connecter</Link></p>
                 </form>
             </div>
         </div>
